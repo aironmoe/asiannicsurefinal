@@ -1,19 +1,19 @@
 $white: #080808;
 $black: #000000;
-$primary1: #ffbe33;
+$primary1:  #0bf0d1;
 $primary2: #222831;
 $textCol: #1f1f1f;
 
 // import fonts -  font-family: 'Open Sans', sans-serif and  font-family: 'Dancing Script', cursive;
 
-@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Montserrat:wght@400;600;700&display=swap');
 
 @mixin main-font {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Iceberg", sans-serif;
 }
 
 @mixin second-font {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @mixin hero_btn($col1, $col2, $pad1, $pad2, $bRadius) {
@@ -159,7 +159,7 @@ a:focus {
 
 }
 
-flex: 1
+
 .header_section {
   padding: 15px 0;
 
@@ -175,7 +175,7 @@ flex: 1
 span {
   font-weight: bold;
   font-size: 30px;
-  color: rgb(0, 0, 0); /* or use a variable if using SCSS: $white */
+  color: rgb(32, 164, 173); /* or use a variable if using SCSS: $white */
   display: inline-flex;
   align-items: center;
   justify-content: center;
