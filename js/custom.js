@@ -70,6 +70,7 @@ $(".client_owl-carousel").owlCarousel({
     dots: false,
     nav: true,
     autoplay: true,
+    autoplayTimeout: 3000,
     autoplayHoverPause: true,
     navText: [
         '<i class="fa fa-angle-left" aria-hidden="true"></i>',
