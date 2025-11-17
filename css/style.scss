@@ -364,6 +364,16 @@ span {
       @include hero_btn($primary1, $white, 10px, 45px, 45px);
       margin-top: 10px;
     }
+      @media (max-width: 768px) {
+    .detail-box h1 {
+      font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+    .detail-box p {
+      font-size: 1rem;   /* Adjust paragraph for mobile */
+    }
+}
+
+    
 
   }
 
@@ -449,7 +459,7 @@ span {
         }
       }
 
-      p {}
+
 
       a {
         @include hero_btn($primary1, $white, 10px, 30px, 45px);

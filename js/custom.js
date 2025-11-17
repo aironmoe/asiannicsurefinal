@@ -1,4 +1,6 @@
-// to get current year
+// ---------------------------
+// Get current year
+// ---------------------------
 function getYear() {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
@@ -7,34 +9,50 @@ function getYear() {
 
 getYear();
 
+// ---------------------------
+// Video autoplay on page load
+// ---------------------------
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.querySelector("video"); // selects the first video
+    if (video) {
+        video.muted = true; // required for mobile autoplay
+        video.play().catch(function(error) {
+            console.log("Autoplay failed:", error);
+        });
+    }
+});
 
-// isotope js
+// ---------------------------
+// Isotope filtering
+// ---------------------------
 $(window).on('load', function () {
-    $('.filters_menu li').click(function () {
-        $('.filters_menu li').removeClass('active');
-        $(this).addClass('active');
-
-        var data = $(this).attr('data-filter');
-        $grid.isotope({
-            filter: data
-        })
-    });
-
     var $grid = $(".grid").isotope({
         itemSelector: ".all",
         percentPosition: false,
         masonry: {
             columnWidth: ".all"
         }
-    })
+    });
+
+    $('.filters_menu li').click(function () {
+        $('.filters_menu li').removeClass('active');
+        $(this).addClass('active');
+
+        var data = $(this).attr('data-filter');
+        $grid.isotope({ filter: data });
+    });
 });
 
-// nice select
+// ---------------------------
+// Nice select
+// ---------------------------
 $(document).ready(function() {
     $('select').niceSelect();
-  });
+});
 
-/** google_map js **/
+// ---------------------------
+// Google Map
+// ---------------------------
 function myMap() {
     var mapProp = {
         center: new google.maps.LatLng(40.712775, -74.005973),
@@ -43,13 +61,14 @@ function myMap() {
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
 
-// client section owl carousel
+// ---------------------------
+// Client section Owl Carousel
+// ---------------------------
 $(".client_owl-carousel").owlCarousel({
     loop: true,
     margin: 0,
     dots: false,
     nav: true,
-    navText: [],
     autoplay: true,
     autoplayHoverPause: true,
     navText: [
@@ -57,15 +76,8 @@ $(".client_owl-carousel").owlCarousel({
         '<i class="fa fa-angle-right" aria-hidden="true"></i>'
     ],
     responsive: {
-        0: {
-            items: 1
-        },
-        768: {
-            items: 2
-        },
-        1000: {
-            items: 2
-        }
+        0: { items: 1 },
+        768: { items: 2 },
+        1000: { items: 2 }
     }
 });
-

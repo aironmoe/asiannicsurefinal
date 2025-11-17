@@ -300,6 +300,14 @@ a:focus {
 .slider_section .detail-box a:hover {
   background-color: rgb(7.6474103586, 166.8525896414, 145.3007968127);
 }
+@media (max-width: 768px) {
+  .slider_section .detail-box .detail-box h1 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+  .slider_section .detail-box .detail-box p {
+    font-size: 1rem; /* Adjust paragraph for mobile */
+  }
+}
 .slider_section .img-box img {
   width: 100%;
 }
