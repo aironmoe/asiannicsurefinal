@@ -13,9 +13,9 @@ getYear();
 // Video autoplay on page load
 // ---------------------------
 document.addEventListener("DOMContentLoaded", function() {
-    var video = document.querySelector("video"); // selects the first video
-    if (video) {
-        video.muted = true; // required for mobile autoplay
+    var video = document.getElementById("heroVideo");
+    if(video) {
+        video.muted = true; // ensure mobile allows autoplay
         video.play().catch(function(error) {
             console.log("Autoplay failed:", error);
         });
